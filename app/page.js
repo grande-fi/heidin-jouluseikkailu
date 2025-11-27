@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { puzzles } from "./puzzleData";
 import { fi } from "./locales/fi";
 
+
 export default function MainMenu() {
   const router = useRouter();
   const [solvedStatus, setSolvedStatus] = useState([]);
