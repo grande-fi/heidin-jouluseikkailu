@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { puzzles } from "./puzzleData";
 import { fi } from "./locales/fi";
 
-
 export default function MainMenu() {
   const router = useRouter();
   const [solvedStatus, setSolvedStatus] = useState([]);
@@ -28,6 +27,10 @@ export default function MainMenu() {
     router.push(`/puzzles/${nextId}`);
   };
 
+  const goToPuzzlesList = () => {
+    router.push("/puzzles");
+  };
+
   const resetProgress = () => {
     puzzles.forEach((_, index) => {
       localStorage.removeItem(`puzzle-${index + 1}-solved`);
@@ -39,18 +42,29 @@ export default function MainMenu() {
   return (
     <div className="max-w-xl mx-auto mt-10 text-center">
       <h1 className="text-3xl font-bold mb-6">{fi.appTitle}</h1>
-      <Button
-        onClick={startPuzzle}
-        className="mb-4 bg-gray-400 hover:bg-gray-500"
-      >
-        {fi.mainMenu.startPuzzle}
-      </Button>
-      <Button
-        onClick={resetProgress}
-        className="bg-red-600 hover:bg-red-700"
-      >
-        {fi.mainMenu.resetProgress}
-      </Button>
+
+      <div className="flex flex-col gap-4">
+        <Button
+          onClick={startPuzzle}
+          className="bg-gray-400 hover:bg-gray-500"
+        >
+          {fi.mainMenu.startPuzzle}
+        </Button>
+
+        <Button
+          onClick={goToPuzzlesList}
+          className="bg-blue-500 hover:bg-blue-600"
+        >
+          Kaikki Tasot
+        </Button>
+
+        <Button
+          onClick={resetProgress}
+          className="bg-red-600 hover:bg-red-700"
+        >
+          {fi.mainMenu.resetProgress}
+        </Button>
+      </div>
     </div>
   );
 }
