@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { puzzles } from "../../puzzleData";
+import { puzzles } from "../puzzleData";
 import { fi } from "../locales/fi"; // import Finnish strings
 
 export default function PuzzlesList() {
