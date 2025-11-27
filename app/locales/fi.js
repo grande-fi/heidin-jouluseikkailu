@@ -1,8 +1,9 @@
 export const fi = {
-  appTitle: "Heidin Jouluseikkailu",
+  appTitle: "Heidin Jouluseikkailu! ",
   mainMenu: {
     startPuzzle: "Aloita Peli",
     resetProgress: "Nollaa eteneminen",
+	levels: "Kaikki Tasot",
   },
   puzzles: {
     solved: "Oikein",
