@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body { @apply bg-gray-900 text-white p-6; }
+/* ✅ Center everything on screen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  @apply bg-gray-900 text-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 h1 { @apply text-3xl font-bold mb-4; }
 p { @apply mb-4; }
 a { @apply text-blue-400 hover:underline; }
