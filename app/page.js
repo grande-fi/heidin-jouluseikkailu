@@ -55,7 +55,7 @@ export default function MainMenu() {
           onClick={goToPuzzlesList}
           className="bg-blue-500 hover:bg-blue-600"
         >
-          Kaikki Tasot
+          {fi.mainMenu.levels}
         </Button>
 
         <Button
