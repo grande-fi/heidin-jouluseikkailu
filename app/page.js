@@ -51,10 +51,9 @@ export default function MainMenu() {
           {fi.mainMenu.startPuzzle}
         </Button>
 
-		<Button
+        <Button
           onClick={goToPuzzlesList}
-          style={{ backgroundColor: "#3b82f6" }}
-          className="hover:bg-blue-600 text-white font-medium"
+          className="bg-blue-500 hover:bg-blue-600"
         >
           {fi.mainMenu.levels}
         </Button>
