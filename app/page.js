@@ -13,15 +13,17 @@ export default function MainMenu() {
 
   // Load progress from localStorage
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const status = puzzles.map((_, index) => {
-      const id = index + 1;
-      return localStorage.getItem(`puzzle-${id}-solved`) === "true";
+      const stored = localStorage.getItem(`puzzle-${index + 1}-solved`);
+      return stored === "true";
     });
 
     setSolvedStatus(status);
 
     const firstUnsolved = status.findIndex((s) => !s);
-    setFirstUnsolvedIndex(firstUnsolved >= 0 ? firstUnsolved : puzzles.length);
+    setFirstUnsolvedIndex(firstUnsolved === -1 ? 0 : firstUnsolved);
   }, []);
 
   const startPuzzle = () => {
@@ -33,6 +35,8 @@ export default function MainMenu() {
   };
 
   const resetProgress = () => {
+    if (typeof window === "undefined") return;
+
     puzzles.forEach((_, index) => {
       localStorage.removeItem(`puzzle-${index + 1}-solved`);
     });
@@ -43,27 +47,17 @@ export default function MainMenu() {
 
   return (
     <>
-      {/* --- Full-viewport background layer (independent of layout) --- */}
-      <div
-        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
-        style={{
-          backgroundImage: "url('/backgrounds/menu.jpg')",
-        }}
-      />
-
-      {/* --- Foreground content --- */}
-      <main className="
-	  min-h-screen w-full 
-   	 flex items-center justify-center 
-    bg-[url('/christmas-bg.jpg')] 
-    bg-cover bg-center bg-no-repeat">
-        
-		
-		
-		<div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
-          
-		  
-		  <h1 className="text-3xl font-bold mb-6 text-white">
+      <main
+        className="
+          min-h-screen w-full
+          flex items-center justify-center
+          bg-[url('/backgrounds/main.jpg')]
+          bg-cover bg-center bg-no-repeat
+          px-4
+        "
+      >
+        <div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
+          <h1 className="text-3xl font-bold mb-6 text-white">
             {fi.appTitle}
           </h1>
 
