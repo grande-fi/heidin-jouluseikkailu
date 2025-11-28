@@ -40,11 +40,13 @@ export default function PuzzlePage({ params }) {
 
   const checkAnswer = () => {
     if (answer.trim().toLowerCase() === puzzle.answer.toLowerCase()) {
-      setFeedback(fi.feedback.correct);
+      // Use unique feedback if available, otherwise use default
+      setFeedback(puzzle.correctFeedback || fi.feedback.correct);
       setSolved(true);
       localStorage.setItem(`puzzle-${puzzleId}-solved`, "true");
     } else {
-      setFeedback(fi.feedback.wrong);
+      // Use unique feedback if available, otherwise use default
+      setFeedback(puzzle.wrongFeedback || fi.feedback.wrong);
     }
   };
 
