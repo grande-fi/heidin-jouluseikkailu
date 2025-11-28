@@ -11,11 +11,13 @@ export default function MainMenu() {
   const [solvedStatus, setSolvedStatus] = useState([]);
   const [firstUnsolvedIndex, setFirstUnsolvedIndex] = useState(0);
 
+  // Load progress from localStorage
   useEffect(() => {
     const status = puzzles.map((_, index) => {
       const id = index + 1;
       return localStorage.getItem(`puzzle-${id}-solved`) === "true";
     });
+
     setSolvedStatus(status);
 
     const firstUnsolved = status.findIndex((s) => !s);
@@ -23,8 +25,7 @@ export default function MainMenu() {
   }, []);
 
   const startPuzzle = () => {
-    const nextId = firstUnsolvedIndex + 1;
-    router.push(`/puzzles/${nextId}`);
+    router.push(`/puzzles/${firstUnsolvedIndex + 1}`);
   };
 
   const goToPuzzlesList = () => {
@@ -35,19 +36,27 @@ export default function MainMenu() {
     puzzles.forEach((_, index) => {
       localStorage.removeItem(`puzzle-${index + 1}-solved`);
     });
+
     setSolvedStatus(puzzles.map(() => false));
     setFirstUnsolvedIndex(0);
   };
 
   return (
-      <main
-        className="min-h-screen bg-cover bg-center flex items-center justify-center"
+    <>
+      {/* --- Full-viewport background layer (independent of layout) --- */}
+      <div
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
         style={{
           backgroundImage: "url('/backgrounds/menu.jpg')",
         }}
-      >
-        <div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-lg">
-          <h1 className="text-3xl font-bold mb-6">{fi.appTitle}</h1>
+      />
+
+      {/* --- Foreground content --- */}
+      <main className="min-h-screen flex items-center justify-center">
+        <div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
+          <h1 className="text-3xl font-bold mb-6 text-white">
+            {fi.appTitle}
+          </h1>
 
           <div className="flex flex-col gap-4">
             <Button
@@ -61,7 +70,7 @@ export default function MainMenu() {
               onClick={goToPuzzlesList}
               className="bg-blue-500 hover:bg-blue-600"
             >
-              {fi.mainMenu.levels}
+              Kaikki Tasot
             </Button>
 
             <Button
@@ -73,5 +82,6 @@ export default function MainMenu() {
           </div>
         </div>
       </main>
-    );
-  }
+    </>
+  );
+}
