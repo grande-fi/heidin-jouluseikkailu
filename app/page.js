@@ -41,7 +41,7 @@ export default function MainMenu() {
 
   const backgroundStyle = {
     backgroundImage: "url('/backgrounds/menu.jpg')",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     minHeight: "100vh",
