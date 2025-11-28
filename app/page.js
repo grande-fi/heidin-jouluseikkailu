@@ -60,19 +60,20 @@ export default function MainMenu() {
 
   return (
     <main style={backgroundStyle}>
-      <div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
-        <h1 style={{ color: "white" }} className="text-3xl font-bold mb-4">
+      <div className="max-w-xl mx-auto bg-black/70 p-8 rounded-xl shadow-xl" style={{ textAlign: "center" }}>
+        <h1 style={{ color: "white", fontSize: "3rem" }} className="font-bold mb-4">
           {fi.appTitle}
         </h1>
         
-        <p style={{ color: "white" }} className="text-lg mb-6">
+        <p style={{ color: "white", fontSize: "1.5rem" }} className="mb-6">
           Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde!
         </p>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4" style={{ alignItems: "center" }}>
           <Button
             onClick={startPuzzle}
             className="bg-gray-400 hover:bg-gray-500"
+            style={{ width: "100%", maxWidth: "300px" }}
           >
             {fi.mainMenu.startPuzzle}
           </Button>
@@ -80,6 +81,7 @@ export default function MainMenu() {
           <Button
             onClick={goToPuzzlesList}
             className="bg-blue-500 hover:bg-blue-600"
+            style={{ width: "100%", maxWidth: "300px" }}
           >
             Kaikki Tasot
           </Button>
@@ -87,6 +89,7 @@ export default function MainMenu() {
           <Button
             onClick={resetProgress}
             className="bg-red-600 hover:bg-red-700"
+            style={{ width: "100%", maxWidth: "300px" }}
           >
             {fi.mainMenu.resetProgress}
           </Button>
