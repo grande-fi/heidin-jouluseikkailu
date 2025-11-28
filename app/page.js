@@ -40,7 +40,7 @@ export default function MainMenu() {
   };
 
   const backgroundStyle = {
-    backgroundImage: "url('../backgrounds/menu.jpg')",
+    backgroundImage: "url('/backgrounds/menu.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
