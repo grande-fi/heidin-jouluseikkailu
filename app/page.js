@@ -39,17 +39,6 @@ export default function MainMenu() {
     setFirstUnsolvedIndex(0);
   };
 
-  const backgroundStyle = {
-    backgroundImage: "url('/backgrounds/menu.jpg')",
-    backgroundSize: "contain",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-
   return (
       <main
         className="min-h-screen bg-cover bg-center flex items-center justify-center"
