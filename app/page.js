@@ -61,14 +61,14 @@ export default function MainMenu() {
   return (
     <main style={backgroundStyle}>
       <div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
-        <h1 className="text-3xl font-bold mb-6 text-white">
+        <h1 style={{ color: "white" }} className="text-3xl font-bold mb-4">
           {fi.appTitle}
         </h1>
-		
-		<p className="text-white text-lg mb-6">
+        
+        <p style={{ color: "white" }} className="text-lg mb-6">
           Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde!
         </p>
-		  
+
         <div className="flex flex-col gap-4">
           <Button
             onClick={startPuzzle}
