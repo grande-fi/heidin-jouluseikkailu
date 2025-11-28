@@ -73,7 +73,14 @@ export default function MainMenu() {
           <Button
             onClick={startPuzzle}
             className="bg-gray-400 hover:bg-gray-500"
-            style={{ width: "100%", maxWidth: "300px" }}
+            style={{ 
+              width: "100%", 
+              maxWidth: "280px",
+              padding: "16px 24px",
+              borderRadius: "50px",
+              fontSize: "18px",
+              minHeight: "56px"
+            }}
           >
             {fi.mainMenu.startPuzzle}
           </Button>
@@ -81,7 +88,14 @@ export default function MainMenu() {
           <Button
             onClick={goToPuzzlesList}
             className="bg-blue-500 hover:bg-blue-600"
-            style={{ width: "100%", maxWidth: "300px" }}
+            style={{ 
+              width: "100%", 
+              maxWidth: "280px",
+              padding: "16px 24px",
+              borderRadius: "50px",
+              fontSize: "18px",
+              minHeight: "56px"
+            }}
           >
             Kaikki Tasot
           </Button>
@@ -89,7 +103,14 @@ export default function MainMenu() {
           <Button
             onClick={resetProgress}
             className="bg-red-600 hover:bg-red-700"
-            style={{ width: "100%", maxWidth: "300px" }}
+            style={{ 
+              width: "100%", 
+              maxWidth: "280px",
+              padding: "16px 24px",
+              borderRadius: "50px",
+              fontSize: "18px",
+              minHeight: "56px"
+            }}
           >
             {fi.mainMenu.resetProgress}
           </Button>
