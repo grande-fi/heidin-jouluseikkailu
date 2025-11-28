@@ -72,14 +72,17 @@ export default function MainMenu() {
         <div className="flex flex-col gap-4" style={{ alignItems: "center" }}>
           <Button
             onClick={startPuzzle}
-            className="bg-gray-400 hover:bg-gray-500"
+            className="hover:opacity-90"
             style={{ 
               width: "100%", 
               maxWidth: "280px",
               padding: "16px 24px",
               borderRadius: "50px",
               fontSize: "18px",
-              minHeight: "56px"
+              minHeight: "56px",
+              backgroundColor: "#126524",
+              border: "none",
+              color: "white"
             }}
           >
             {fi.mainMenu.startPuzzle}
@@ -87,14 +90,17 @@ export default function MainMenu() {
 
           <Button
             onClick={goToPuzzlesList}
-            className="bg-blue-500 hover:bg-blue-600"
+            className="hover:opacity-90"
             style={{ 
               width: "100%", 
               maxWidth: "280px",
               padding: "16px 24px",
               borderRadius: "50px",
               fontSize: "18px",
-              minHeight: "56px"
+              minHeight: "56px",
+              backgroundColor: "#126524",
+              border: "none",
+              color: "white"
             }}
           >
             Kaikki Tasot
@@ -102,14 +108,17 @@ export default function MainMenu() {
 
           <Button
             onClick={resetProgress}
-            className="bg-red-600 hover:bg-red-700"
+            className="hover:opacity-90"
             style={{ 
               width: "100%", 
               maxWidth: "280px",
               padding: "16px 24px",
               borderRadius: "50px",
               fontSize: "18px",
-              minHeight: "56px"
+              minHeight: "56px",
+              backgroundColor: "#126524",
+              border: "none",
+              color: "white"
             }}
           >
             {fi.mainMenu.resetProgress}
