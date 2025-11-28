@@ -69,7 +69,7 @@ export default function MainMenu() {
           Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde!
         </p>
 
-        <div className="flex flex-col gap-4" style={{ alignItems: "center" }}>
+        <div className="flex flex-col gap-6" style={{ alignItems: "center" }}>
           <Button
             onClick={startPuzzle}
             className="hover:opacity-90"
@@ -80,9 +80,9 @@ export default function MainMenu() {
               borderRadius: "50px",
               fontSize: "18px",
               minHeight: "56px",
-              backgroundColor: "#126524",
+              backgroundColor: "#9ca3af",
               border: "none",
-              color: "white"
+              color: "black"
             }}
           >
             {fi.mainMenu.startPuzzle}
@@ -98,9 +98,9 @@ export default function MainMenu() {
               borderRadius: "50px",
               fontSize: "18px",
               minHeight: "56px",
-              backgroundColor: "#126524",
+              backgroundColor: "#3b82f6",
               border: "none",
-              color: "white"
+              color: "black"
             }}
           >
             Kaikki Tasot
@@ -116,9 +116,9 @@ export default function MainMenu() {
               borderRadius: "50px",
               fontSize: "18px",
               minHeight: "56px",
-              backgroundColor: "#126524",
+              backgroundColor: "#dc2626",
               border: "none",
-              color: "white"
+              color: "black"
             }}
           >
             {fi.mainMenu.resetProgress}
