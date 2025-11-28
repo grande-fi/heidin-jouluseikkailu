@@ -69,7 +69,7 @@ export default function MainMenu() {
           Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde!
         </p>
 
-        <div className="flex flex-col" style={{ alignItems: "center", gap: "24px" }}>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px" }}>
           <Button
             onClick={startPuzzle}
             className="hover:opacity-90"
