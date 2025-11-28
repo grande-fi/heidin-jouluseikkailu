@@ -52,9 +52,18 @@ export default function MainMenu() {
       />
 
       {/* --- Foreground content --- */}
-      <main className="min-h-screen flex items-center justify-center">
-        <div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
-          <h1 className="text-3xl font-bold mb-6 text-white">
+      <main className="
+	  min-h-screen w-full 
+   	 flex items-center justify-center 
+    bg-[url('/christmas-bg.jpg')] 
+    bg-cover bg-center bg-no-repeat">
+        
+		
+		
+		<div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
+          
+		  
+		  <h1 className="text-3xl font-bold mb-6 text-white">
             {fi.appTitle}
           </h1>
 
