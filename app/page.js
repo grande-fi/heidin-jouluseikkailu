@@ -39,31 +39,44 @@ export default function MainMenu() {
     setFirstUnsolvedIndex(0);
   };
 
+  const backgroundStyle = {
+    backgroundImage: "url('/backgrounds/menu.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
+
   return (
-    <div className="max-w-xl mx-auto mt-10 text-center">
-      <h1 className="text-3xl font-bold mb-6">{fi.appTitle}</h1>
+    <div style={backgroundStyle}>
+      <div className="max-w-xl mx-auto text-center bg-black bg-opacity-70 p-8 rounded-lg">
+        <h1 className="text-3xl font-bold mb-6">{fi.appTitle}</h1>
 
-      <div className="flex flex-col gap-4">
-        <Button
-          onClick={startPuzzle}
-          className="bg-gray-400 hover:bg-gray-500"
-        >
-          {fi.mainMenu.startPuzzle}
-        </Button>
+        <div className="flex flex-col gap-4">
+          <Button
+            onClick={startPuzzle}
+            className="bg-gray-400 hover:bg-gray-500"
+          >
+            {fi.mainMenu.startPuzzle}
+          </Button>
 
-        <Button
-          onClick={goToPuzzlesList}
-          className="bg-blue-500 hover:bg-blue-600"
-        >
-          {fi.mainMenu.levels}
-        </Button>
+          <Button
+            onClick={goToPuzzlesList}
+            className="bg-blue-500 hover:bg-blue-600"
+          >
+            {fi.mainMenu.levels}
+          </Button>
 
-        <Button
-          onClick={resetProgress}
-          className="bg-red-600 hover:bg-red-700"
-        >
-          {fi.mainMenu.resetProgress}
-        </Button>
+          <Button
+            onClick={resetProgress}
+            className="bg-red-600 hover:bg-red-700"
+          >
+            {fi.mainMenu.resetProgress}
+          </Button>
+        </div>
       </div>
     </div>
   );
