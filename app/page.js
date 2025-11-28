@@ -64,7 +64,11 @@ export default function MainMenu() {
         <h1 className="text-3xl font-bold mb-6 text-white">
           {fi.appTitle}
         </h1>
-
+		
+		<p className="text-white text-lg mb-6">
+          Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde!
+        </p>
+		  
         <div className="flex flex-col gap-4">
           <Button
             onClick={startPuzzle}

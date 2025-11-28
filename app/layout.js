@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata = { 
   title: 'Heidin Jouluseikkailu', 
-  description: 'Ratkaise tehtävät ja löydä määränpää' 
+  description: 'Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde!' 
 };
 
 export default function RootLayout({ children }) { 
