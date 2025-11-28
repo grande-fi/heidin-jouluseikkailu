@@ -51,7 +51,7 @@ export default function MainMenu() {
         className="
           min-h-screen w-full
           flex items-center justify-center
-          bg-[url('/backgrounds/main.jpg')]
+          bg-[url('/backgrounds/menu.jpg')]
           bg-cover bg-center bg-no-repeat
           px-4
         "
