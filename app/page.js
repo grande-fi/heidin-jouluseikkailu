@@ -45,17 +45,21 @@ export default function MainMenu() {
     setFirstUnsolvedIndex(0);
   };
 
-  return (
-    <>
-      <main
-        className="
-          min-h-screen w-full
-          flex items-center justify-center
-          bg-[url('/backgrounds/menu.jpg')]
-          bg-cover bg-center bg-no-repeat
-          px-4
-        "
-      >
+  const backgroundStyle = {
+      backgroundImage: "url('/backgrounds/menu.jpg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      minHeight: "100vh",
+      width: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      padding: "1rem",
+    };
+
+    return (
+      <main style={backgroundStyle}>
         <div className="max-w-xl mx-auto text-center bg-black/70 p-8 rounded-xl shadow-xl">
           <h1 className="text-3xl font-bold mb-6 text-white">
             {fi.appTitle}
