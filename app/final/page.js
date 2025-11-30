@@ -10,6 +10,18 @@ export default function FinalPage() {
   const backToMenu = () => {
     router.push("/");
   };
+  const backgroundStyle = {
+    backgroundImage: "url('/backgrounds/final.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    minHeight: "100vh",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "1rem",
+  };
 
   return (
     <div className="max-w-xl mx-auto mt-10 text-center">
