@@ -82,7 +82,8 @@ export default function MainMenu() {
               minHeight: "56px",
               backgroundColor: "#126524",
               border: "none",
-              color: "white"
+              color: "white",
+			  opacity: 0.7
             }}
           >
             {fi.mainMenu.startPuzzle}
@@ -100,7 +101,8 @@ export default function MainMenu() {
               minHeight: "56px",
               backgroundColor: "#126524",
               border: "none",
-              color: "white"
+              color: "white",
+			  opacity: 0.7
             }}
           >
             Kaikki Tasot
@@ -118,7 +120,8 @@ export default function MainMenu() {
               minHeight: "56px",
               backgroundColor: "#126524",
               border: "none",
-              color: "white"
+              color: "white",
+			  opacity: 0.7
             }}
           >
             {fi.mainMenu.resetProgress}
