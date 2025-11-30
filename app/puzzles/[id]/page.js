@@ -111,8 +111,7 @@ export default function PuzzlePage({ params }) {
               backgroundColor: "#126524",
               border: "none",
               color: "white",
-			  opacity: 0.7,
-              opacity: solved ? 0.5 : 1,
+              opacity: solved ? 0.5 : 0.7,
               cursor: solved ? "not-allowed" : "pointer"
             }}
           >
