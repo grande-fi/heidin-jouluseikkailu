@@ -10,9 +10,9 @@ import { fi } from "../../locales/fi";
 const puzzleBackgrounds = {
   1: "/backgrounds/puzzle1.jpg",
   2: "/backgrounds/puzzle2.jpg",
-//  3: "/backgrounds/puzzle3.jpg",
+  3: "/backgrounds/puzzle3.jpg",
   4: "/backgrounds/puzzle4.jpg",
-/*  5: "/backgrounds/puzzle5.jpg",
+  5: "/backgrounds/puzzle5.jpg",
   6: "/backgrounds/puzzle6.jpg",
   7: "/backgrounds/puzzle7.jpg",
   8: "/backgrounds/puzzle8.jpg",
@@ -21,7 +21,7 @@ const puzzleBackgrounds = {
   11: "/backgrounds/puzzle11.jpg",
   12: "/backgrounds/puzzle12.jpg",
   13: "/backgrounds/puzzle13.jpg",
-  14: "/backgrounds/puzzle14.jpg",*/
+  14: "/backgrounds/puzzle14.jpg",
 };
 
 export default function PuzzlePage({ params }) {
