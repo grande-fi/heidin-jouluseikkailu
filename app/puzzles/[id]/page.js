@@ -111,6 +111,7 @@ export default function PuzzlePage({ params }) {
               backgroundColor: "#126524",
               border: "none",
               color: "white",
+			  opacity: 0.7,
               opacity: solved ? 0.5 : 1,
               cursor: solved ? "not-allowed" : "pointer"
             }}
@@ -130,7 +131,8 @@ export default function PuzzlePage({ params }) {
               minHeight: "56px",
               backgroundColor: "#126524",
               border: "none",
-              color: "white"
+              color: "white",
+			  opacity: 0.7
             }}
           >
             Takaisin päävalikkoon
@@ -149,7 +151,8 @@ export default function PuzzlePage({ params }) {
                 minHeight: "56px",
                 backgroundColor: "#126524",
                 border: "none",
-                color: "white"
+                color: "white",
+				opacity: 0.7
               }}
             >
               Seuraava Taso
