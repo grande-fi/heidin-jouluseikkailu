@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { puzzles } from "../puzzleData";
-import { fi } from "../locales/fi"; // import Finnish strings
+import { fi } from "../locales/fi";
 
 export default function PuzzlesList() {
   const router = useRouter();
@@ -28,43 +28,72 @@ export default function PuzzlesList() {
     }
   };
 
-  if (solvedStatus.length === 0) return null; // wait for client
+  if (solvedStatus.length === 0) return null;
+
+  const backgroundStyle = {
+    backgroundImage: "url('/backgrounds/menu.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    minHeight: "100vh",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "1rem",
+  };
 
   return (
-    <div className="max-w-xl mx-auto mt-10 text-center">
-      <h1 className="text-3xl font-bold mb-6">{fi.appTitle}</h1>
-      <p className="mb-4">{fi.puzzles.choosePuzzle}</p>
+    <main style={backgroundStyle}>
+      <div className="max-w-xl mx-auto bg-black/70 p-8 rounded-xl shadow-xl" style={{ textAlign: "center" }}>
+        <h1 style={{ color: "white", fontSize: "3rem" }} className="font-bold mb-4">
+          {fi.appTitle}
+        </h1>
+        
+        <p style={{ color: "white", fontSize: "1.5rem" }} className="mb-6">
+          {fi.puzzles.choosePuzzle}
+        </p>
 
-      <div className="flex flex-col gap-3">
-        {puzzles.map((_, index) => {
-          const puzzleId = index + 1;
-          const solved = solvedStatus[index];
-          const isFirstUnsolved = index === firstUnsolvedIndex;
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px" }}>
+          {puzzles.map((_, index) => {
+            const puzzleId = index + 1;
+            const solved = solvedStatus[index];
+            const isFirstUnsolved = index === firstUnsolvedIndex;
 
-          let backgroundColor = "";
-          if (solved) backgroundColor = "#16a34a"; // green
-          else if (isFirstUnsolved) backgroundColor = "#9ca3af"; // gray
-          else backgroundColor = "#f472b6"; // pink
+            let backgroundColor = "";
+            if (solved) backgroundColor = "#16a34a"; // green
+            else if (isFirstUnsolved) backgroundColor = "#126524"; // same green as main menu
+            else backgroundColor = "#f472b6"; // pink (locked)
 
-          return (
-            <Button
-              key={puzzleId}
-              onClick={() => goToPuzzle(puzzleId, index)}
-              style={{
-                backgroundColor,
-                cursor: !solved && !isFirstUnsolved ? "not-allowed" : "pointer",
-              }}
-            >
-              Taso {puzzleId}{" "}
-              {solved
-                ? `(${fi.puzzles.solved})`
-                : isFirstUnsolved
-                ? `(${fi.puzzles.open})`
-                : `(${fi.puzzles.locked})`}
-            </Button>
-          );
-        })}
+            return (
+              <Button
+                key={puzzleId}
+                onClick={() => goToPuzzle(puzzleId, index)}
+                style={{
+                  width: "100%",
+                  maxWidth: "280px",
+                  padding: "16px 24px",
+                  borderRadius: "50px",
+                  fontSize: "18px",
+                  minHeight: "56px",
+                  backgroundColor,
+                  border: "none",
+                  color: "white",
+                  opacity: 0.7,
+                  cursor: !solved && !isFirstUnsolved ? "not-allowed" : "pointer",
+                }}
+              >
+                Taso {puzzleId}{" "}
+                {solved
+                  ? `(${fi.puzzles.solved})`
+                  : isFirstUnsolved
+                  ? `(${fi.puzzles.open})`
+                  : `(${fi.puzzles.locked})`}
+              </Button>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
