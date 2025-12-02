@@ -64,7 +64,6 @@ export default function MainMenu() {
 	  <h1 style={{ 
 	            color: "white", 
 	            fontSize: "3rem",
-		  		fontFamily: "Arial",
 	            WebkitTextStroke: "2px black",
 	            textShadow: "3px 3px 6px rgba(0, 0, 0, 0.8)"
 	          }} className="font-bold mb-4">
