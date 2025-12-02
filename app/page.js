@@ -61,7 +61,12 @@ export default function MainMenu() {
   return (
     <main style={backgroundStyle}>
       <div className="max-w-xl mx-auto bg-black/70 p-8 rounded-xl shadow-xl" style={{ textAlign: "center" }}>
-        <h1 style={{ color: "white", fontSize: "3rem" }} className="font-bold mb-4">
+	  <h1 style={{ 
+	            color: "white", 
+	            fontSize: "3rem",
+	            WebkitTextStroke: "2px black",
+	            textShadow: "3px 3px 6px rgba(0, 0, 0, 0.8)"
+	          }} className="font-bold mb-4">
           {fi.appTitle}
         </h1>
         
