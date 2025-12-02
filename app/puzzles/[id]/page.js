@@ -79,11 +79,22 @@ export default function PuzzlePage({ params }) {
   return (
     <main style={backgroundStyle}>
       <div className="max-w-xl mx-auto bg-black/70 p-8 rounded-xl shadow-xl" style={{ textAlign: "center" }}>
-        <h1 style={{ color: "white", fontSize: "3rem" }} className="font-bold mb-4">
+        <h1 style={{ 
+				color: "white", 
+	            fontSize: "3rem",
+	            WebkitTextStroke: "2px black",
+	            textShadow: "3px 3px 6px rgba(0, 0, 0, 0.8)"
+			}} className="font-bold mb-4">
           {`Taso ${puzzleId}`}
         </h1>
         
-        <p style={{ color: "white", fontSize: "1.5rem" }} className="mb-6">
+        <p style={{ 
+		            color: "white", 
+		            fontSize: "1.5rem",
+			  		fontWeight: "bold",
+		            WebkitTextStroke: "1px black",
+		            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)"
+			 	}} className="mb-6">
           {puzzle.question}
         </p>
         
@@ -160,7 +171,12 @@ export default function PuzzlePage({ params }) {
         </div>
         
         {feedback && (
-          <p style={{ color: "white", fontSize: "1.5rem", fontWeight: "bold" }} className="mt-6">
+          <p style={{ 
+		            color: "white", 
+		            fontSize: "1.5rem",
+			  		fontWeight: "bold",
+		            WebkitTextStroke: "1px black",
+		            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)"}} className="mt-6">
             {feedback}
           </p>
         )}

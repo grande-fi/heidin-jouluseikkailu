@@ -77,7 +77,7 @@ export default function MainMenu() {
 		            WebkitTextStroke: "1px black",
 		            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)"
 		          }} className="mb-6">
-		             Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde! 6.2 mennään mutta minne? Noh taidatkin jo tietää...
+		             Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde! 6.2. mennään mutta minne? Noh taidatkin jo tietää...
 		</p>
         
         
