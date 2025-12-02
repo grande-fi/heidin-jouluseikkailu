@@ -73,6 +73,7 @@ export default function MainMenu() {
 		  <p style={{ 
 		            color: "white", 
 		            fontSize: "1.5rem",
+			  		fontWeight: "bold",
 		            WebkitTextStroke: "1px black",
 		            textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)"
 		          }} className="mb-6">
