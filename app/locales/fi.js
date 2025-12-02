@@ -1,5 +1,5 @@
 export const fi = {
-  appTitle: "Heidin Jouluseikkailu! 6.2 mennään mutta minne? ",
+  appTitle: "Heidin Jouluseikkailu! 6.2 mennään mutta minne? Noh taidatkin jo tietää... ",
   mainMenu: {
     startPuzzle: "Aloita Peli",
     resetProgress: "Aloita Alusta",
