@@ -66,7 +66,7 @@ export default function MainMenu() {
         </h1>
         
         <p style={{ color: "white", fontSize: "1.5rem" }} className="mb-6">
-          Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde!
+          Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde! 6.2 mennään mutta minne? Noh taidatkin jo tietää...
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px" }}>
