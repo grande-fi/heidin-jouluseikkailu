@@ -70,7 +70,11 @@ export default function MainMenu() {
           {fi.appTitle}
         </h1>
         
-        <p style={{ color: "white", fontSize: "1.5rem" }} className="mb-6">
+        <p style={{ color: "white", 
+		  			fontSize: "1.5rem" 
+	           	 	WebkitTextStroke: "1px black",
+	           	 	//textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)"
+				}} className="mb-6">
           Ratkaise tehtävät, kerää tuloksista naatit ja löydä kohde! 6.2 mennään mutta minne? Noh taidatkin jo tietää...
         </p>
 
