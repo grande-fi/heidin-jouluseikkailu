@@ -97,9 +97,9 @@ export default function MainMenu() {
               color: "white",
 			  opacity: 0.7
             }}
-			onMouseDown={(e) => e.currentTarget.style.backgroundColor = "#0d4a1a"}
-			onMouseUp={(e) => e.currentTarget.style.backgroundColor = "#126524"}
-			onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#126524"}
+			onTouchStart={(e) => (e.currentTarget.style.backgroundColor = "#0d4a1a")}
+			  onTouchEnd={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
+			  onTouchCancel={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
           >
             {fi.mainMenu.startPuzzle}
           </Button>
@@ -119,9 +119,9 @@ export default function MainMenu() {
               color: "white",
 			  opacity: 0.7
             }}
-			onMouseDown={(e) => e.currentTarget.style.backgroundColor = "#0d4a1a"}
-			onMouseUp={(e) => e.currentTarget.style.backgroundColor = "#126524"}
-			onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#126524"}
+			onTouchStart={(e) => (e.currentTarget.style.backgroundColor = "#0d4a1a")}
+			  onTouchEnd={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
+			  onTouchCancel={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
           >
             Kaikki Tasot
           </Button>
@@ -141,9 +141,9 @@ export default function MainMenu() {
               color: "white",
 			  opacity: 0.7
             }}
-			onMouseDown={(e) => e.currentTarget.style.backgroundColor = "#0d4a1a"}
-			onMouseUp={(e) => e.currentTarget.style.backgroundColor = "#126524"}
-			onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#126524"}
+			onTouchStart={(e) => (e.currentTarget.style.backgroundColor = "#0d4a1a")}
+			  onTouchEnd={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
+			  onTouchCancel={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
           >
             {fi.mainMenu.resetProgress}
           </Button>
