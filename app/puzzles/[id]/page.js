@@ -125,6 +125,9 @@ export default function PuzzlePage({ params }) {
               opacity: solved ? 0.5 : 0.7,
               cursor: solved ? "not-allowed" : "pointer"
             }}
+			onTouchStart={(e) => (e.currentTarget.style.backgroundColor = "#0d4a1a")}
+			  onTouchEnd={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
+			  onTouchCancel={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
           >
             Tarkista
           </Button>
@@ -144,6 +147,9 @@ export default function PuzzlePage({ params }) {
               color: "white",
 			  opacity: 0.7
             }}
+			onTouchStart={(e) => (e.currentTarget.style.backgroundColor = "#0d4a1a")}
+			  onTouchEnd={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
+			  onTouchCancel={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
           >
             Takaisin päävalikkoon
           </Button>
@@ -164,6 +170,9 @@ export default function PuzzlePage({ params }) {
                 color: "white",
 				opacity: 0.7
               }}
+			  onTouchStart={(e) => (e.currentTarget.style.backgroundColor = "#0d4a1a")}
+			    onTouchEnd={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
+			    onTouchCancel={(e) => (e.currentTarget.style.backgroundColor = "#126524")}
             >
               Seuraava Taso
             </Button>
