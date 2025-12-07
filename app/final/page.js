@@ -43,7 +43,7 @@ export default function FinalPage() {
           WebkitTextStroke: "1px black",
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)"
         }} className="mb-6">
-          N 56° 56.703, E 24° 06.475
+          N 56° 56.703, E 24° 06.475 <br />
 		Ja check-in 6.2.2026 klo 11:00 😘
         </p>
         
