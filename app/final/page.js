@@ -43,7 +43,7 @@ export default function FinalPage() {
           WebkitTextStroke: "1px black",
           textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)"
         }} className="mb-6">
-          56° 56.703′ N, 24° 6.475′ E
+          N 56° 56.703, E 24° 06.475
         </p>
         
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px" }}>
