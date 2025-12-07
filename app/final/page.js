@@ -10,6 +10,7 @@ export default function FinalPage() {
   const backToMenu = () => {
     router.push("/");
   };
+
   const backgroundStyle = {
     backgroundImage: "url('/backgrounds/final.jpg')",
     backgroundSize: "cover",
@@ -24,10 +25,52 @@ export default function FinalPage() {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-10 text-center">
-      <h1 className="text-3xl font-bold mb-6">{fi.finalCoordinates.title}</h1>
-      <p className="text-xl mb-6">56° 56.703′ N, 24° 6.475′ E</p>
-      <Button onClick={backToMenu}>Takaisin päävalikkoon</Button>
-    </div>
+    <main style={backgroundStyle}>
+      <div className="max-w-xl mx-auto bg-black/70 p-8 rounded-xl shadow-xl" style={{ textAlign: "center" }}>
+        <h1 style={{ 
+          color: "white", 
+          fontSize: "3rem",
+          WebkitTextStroke: "2px black",
+          textShadow: "3px 3px 6px rgba(0, 0, 0, 0.8)"
+        }} className="font-bold mb-4">
+          {fi.finalCoordinates.title}
+        </h1>
+        
+        <p style={{ 
+          color: "white", 
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          WebkitTextStroke: "1px black",
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8)"
+        }} className="mb-6">
+          56° 56.703′ N, 24° 6.475′ E
+        </p>
+        
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "24px" }}>
+          <Button
+            onClick={backToMenu}
+            className="hover:opacity-90"
+            style={{ 
+              width: "100%", 
+              maxWidth: "280px",
+              padding: "16px 24px",
+              borderRadius: "50px",
+              fontSize: "18px",
+              minHeight: "56px",
+              backgroundColor: "#126524",
+              border: "none",
+              color: "white",
+              opacity: 0.7,
+              transition: "all 0.2s ease"
+            }}
+            onMouseDown={(e) => e.currentTarget.style.backgroundColor = "#0d4a1a"}
+            onMouseUp={(e) => e.currentTarget.style.backgroundColor = "#126524"}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#126524"}
+          >
+            Takaisin päävalikkoon
+          </Button>
+        </div>
+      </div>
+    </main>
   );
 }
