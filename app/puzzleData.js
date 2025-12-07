@@ -61,7 +61,7 @@ export const puzzles = [
     wrongFeedback: "Ei ihan. Yritä uudelleen tai saat suukon!"
   },
   { 
-    question: "Matkalla kätkölle ja samaa polkua takaisin ohitit ison "sähkökaapin". Kaapissa on erään velhon nimi. Kuinka monta kirjainta nimessä on?", 
+    question: "Matkalla kätkölle ja samaa polkua takaisin ohitit ison sähkökaapin. Kaapissa on erään velhon nimi. Kuinka monta kirjainta nimessä on?", 
     answer: "6",
     correctFeedback: "Täydellistä rakas! 6 muistiin ja matka jatkukoon",
     wrongFeedback: "Ei ihan. Yritä uudelleen tai saat suukon!"
